@@ -90,12 +90,8 @@ uint32_t* convert_to_binary(const char string[]) {
     // Вычисление размера массива m в 32-битных словах
     int m_size = total_bit_len / 32 + (total_bit_len % 32 != 0);
 
-    // Выделение памяти для массива m
     uint32_t* binary_data = (uint32_t*)malloc(m_size * sizeof(uint32_t));
-
-    // Инициализация индекса для записи битов в массив m
     int bit_index = 0;
-
     // Преобразование каждого символа входного сообщения в биты
     for (int i = 0; i < message_len; i++) {
         char ch = string[i];
@@ -124,7 +120,6 @@ uint32_t* convert_to_binary(const char string[]) {
             << (24 + (i * 8) - ((total_bit_len - 64 + i) % 32));
     }
 
-    // Вывод преобразованного сообщения в двоичном формате
     print_binary_data(binary_data, m_size);
     return binary_data;
 }
