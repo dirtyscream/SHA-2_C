@@ -1,0 +1,129 @@
+SequelizeDatabaseError: SQLITE_ERROR: no such table: Users
+ReferenceError: bcrypt is not defined
+ReferenceError: bcrypt is not defined
+ReferenceError: bcrypt is not defined
+ReferenceError: bcrypt is not defined
+ReferenceError: bcrypt is not defined
+ReferenceError: bcrypt is not defined
+Error: data and hash arguments required
+Error: data and hash arguments required
+Error: data and hash arguments required
+Error: data and hash arguments required
+SequelizeDatabaseError: SQLITE_ERROR: table Users has no column named password
+SequelizeDatabaseError: SQLITE_ERROR: table Users has no column named password
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of undefined (reading 'password')
+TypeError: Cannot read properties of undefined (reading 'password')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'dataValues')
+TypeError: Cannot read properties of null (reading 'password')
+TypeError: Cannot read properties of null (reading 'password')
+TypeError: Cannot read properties of null (reading 'password')
+Url: /api/user_login,
+                Method: POST,
+                Body: [object Object]
+
+Url: /api/user_register/,
+                Method: POST,
+                Body: [object Object]
+
+Url: /api/user_login/,
+                Method: POST,
+                Body: [object Object]
+
+ReferenceError: secretKey is not defined
+Url: /api/user_login/,
+                Method: POST,
+                Body: [object Object]
+
+ReferenceError: secretKey is not defined
+Url: /api/user_login/,
+                Method: POST,
+                Body: [object Object]
+
+Url: /api/company_register/,
+                Method: POST,
+                Body: [object Object]
+
+Url: /api/company_login,
+                Method: POST,
+                Body: [object Object]
+
+Url: /api/company_login,
+                Method: POST
+
+Url: /api/company_login,
+                Method: POST
+
+Url: /api/company_login,
+                Method: POST
+
+Url: /api/company_login,
+                Method: POST
+
+Url: /api/company_login,
+                Method: POST
+
+Url: /api/company_login,
+                Method: POST
+
+Url: /api/add_product,
+                Method: POST
+
+Url: /api/add_product,
+                Method: POST
+
+Url: /api/add_product,
+                Method: POST
+
+Url: /api/add_product,
+                Method: POST
+
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+Url: /api/user_register,
+                Method: POST
+
+SequelizeValidationError: string violation: password cannot be an array or an object
+
