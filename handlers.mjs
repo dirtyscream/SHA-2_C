@@ -9,7 +9,7 @@ export const user_register = async (request, response) => {
     const { username, email, password } = request.body
     if (!username || !email || !password) {
       response.status(400).json({ error: 'Invalid data' })
-      return
+      returns
     }
     console.log("Not error")
     const instance_user = await models.User.findOne({ where: { email: email } })

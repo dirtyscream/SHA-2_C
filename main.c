@@ -3,20 +3,18 @@
 #include "stdlib.h"
 #include "string.h"
 
-static inline uint32_t rotr(uint32_t x, int n) {
-    return (x >> n) | (x << (32 - n));
+#define ROTR(x, n) (((x) >> (n)) | ((x) << (32 - (n))))
+
+uint32_t step1(uint32_t e, uint32_t f, uint32_t g) {
+    return (ROTR(e, 6) ^ ROTR(e, 11) ^ ROTR(e, 25)) + ((e & f) ^ ((~e) & g));
 }
 
-static inline uint32_t step1(uint32_t e, uint32_t f, uint32_t g) {
-    return (rotr(e, 6) ^ rotr(e, 11) ^ rotr(e, 25)) + ((e & f) ^ ((~e) & g));
-}
-
-static inline uint32_t step2(uint32_t a, uint32_t b, uint32_t c) {
-    return (rotr(a, 2) ^ rotr(a, 13) ^ rotr(a, 22)) +
+uint32_t step2(uint32_t a, uint32_t b, uint32_t c) {
+    return (ROTR(a, 2) ^ ROTR(a, 13) ^ ROTR(a, 22)) +
            ((a & b) ^ (a & c) ^ (b & c));
 }
 
-static inline void update_w(uint32_t *w, int i, const uint8_t *buffer) {
+void update_w(uint32_t *w, int i, const uint8_t *buffer) {
     int j;
     for (j = 0; j < 16; j++) {
         if (i < 16) {
@@ -26,14 +24,14 @@ static inline void update_w(uint32_t *w, int i, const uint8_t *buffer) {
         } else {
             uint32_t a = w[(j + 1) & 15];
             uint32_t b = w[(j + 14) & 15];
-            uint32_t s0 = (rotr(a, 7) ^ rotr(a, 18) ^ (a >> 3));
-            uint32_t s1 = (rotr(b, 17) ^ rotr(b, 19) ^ (b >> 10));
+            uint32_t s0 = (ROTR(a, 7) ^ ROTR(a, 18) ^ (a >> 3));
+            uint32_t s1 = (ROTR(b, 17) ^ ROTR(b, 19) ^ (b >> 10));
             w[j] += w[(j + 9) & 15] + s0 + s1;
         }
     }
 }
 
-static void sha256_block(struct sha256 *sha) {
+void sha256_block(struct sha256 *sha) {
     uint32_t *state = sha->state;
 
     static const uint32_t k[8 * 8] = {
@@ -174,16 +172,6 @@ void sha256_hex(const void *src, size_t n_bytes, char *dst_hex65) {
     sha256_append(&sha, src, n_bytes);
 
     sha256_finalize_hex(&sha, dst_hex65);
-}
-
-void sha256_bytes(const void *src, size_t n_bytes, void *dst_bytes32) {
-    struct sha256 sha;
-
-    sha256_init(&sha);
-
-    sha256_append(&sha, src, n_bytes);
-
-    sha256_finalize_bytes(&sha, dst_bytes32);
 }
 
 int main(int argc, char *argv[]) {

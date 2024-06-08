@@ -183,3 +183,21 @@ Url: /api/user_login,
 Url: /api/user_login,
                 Method: POST
 
+Url: /api/user_register,
+                Method: GET
+
+Url: /favicon.ico,
+                Method: GET
+
+Url: /api/user_register/,
+                Method: GET
+
+Url: /api/user_register,
+                Method: GET
+
+Url: /api/user_register,
+                Method: POST
+
+Url: /api/user_register,
+                Method: POST
+

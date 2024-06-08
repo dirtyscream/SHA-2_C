@@ -59,6 +59,10 @@
   "files.associations": {
     "string.h": "c",
     "ios": "c",
-    "sstream": "c"
+    "sstream": "c",
+    "stdint.h": "c",
+    "sha256.h": "c",
+    "stdlib.h": "c",
+    "stdio.h": "c"
   }
 }
